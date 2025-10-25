@@ -1,0 +1,235 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e40af;
+  color: white;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+}
+
+/* Login/Register Pages */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #93c5fd, #6366f1);
+}
+
+.auth-card {
+  background-color: #ffffff;
+  padding: 40px 35px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1e3a8a;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.auth-input {
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59,130,246,0.4);
+}
+
+.auth-button {
+  padding: 12px;
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.auth-link, .auth-error {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+.auth-error {
+  color: #ef4444;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1e40af;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Filter */
+.filter-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-container select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-weight: 500;
+}
+
+/* Charts */
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chart-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* User Welcome Page */
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  background-color: #f3f4f6;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Table Styling */
+.activity-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.activity-table th, .activity-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.activity-table th {
+  background-color: #1e40af;
+  color: white;
+  font-weight: 600;
+}
+
+.activity-table tr:hover {
+  background-color: #e0e7ff;
+}
