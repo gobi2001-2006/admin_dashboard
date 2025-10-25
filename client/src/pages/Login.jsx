@@ -8,21 +8,18 @@ export default function Login() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
- const handleLogin = async (e) => {
-  e.preventDefault();
-  try {
-    const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
-      email,
-      password,
-    });
-    localStorage.setItem("token", res.data.token);
-    localStorage.setItem("role", res.data.role);
-    if (res.data.role === "admin") navigate("/admin");
-    else navigate("/user");
-  } catch (err) {
-    setError(err.response?.data?.message || "Login failed");
-  }
-};
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("role", res.data.role);
+      if (res.data.role === "admin") navigate("/admin");
+      else navigate("/user");
+    } catch (err) {
+      setError(err.response?.data?.message || "Login failed");
+    }
+  };
 
   return (
     <div className="auth-container">
