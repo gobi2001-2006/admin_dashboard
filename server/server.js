@@ -8,12 +8,20 @@ import adminRoutes from './routes/adminRoutes.js';
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: 'https://admin-dashboard-client-06r0.onrender.com/login', credentials: true }));
+app.use(cors({ 
+  origin: 'https://admin-dashboard-client-06r0.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Backend running successfully 🚀');
+});
 
 
 mongoose.connect(process.env.MONGODB_URI)
