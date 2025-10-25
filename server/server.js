@@ -8,7 +8,7 @@ import adminRoutes from './routes/adminRoutes.js';
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({ origin: 'https://admin-dashboard-client-06r0.onrender.com/login', credentials: true }));
 app.use(express.json());
 
 
